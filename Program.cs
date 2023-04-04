@@ -1,20 +1,20 @@
-﻿namespace Execicio_3
+﻿namespace Exercicio_1
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite a data (DDMMAAAA): ");
-            string data = Console.ReadLine();
+            double num1, num2, media;
 
-            // Converte a data para o formato AAAAMMDD
-            string dataAAAAMMDD = data.Substring(4, 4) + data.Substring(2, 2) + data.Substring(0, 2);
+            Console.Write("Digite o primeiro número: ");
+            num1 = double.Parse(Console.ReadLine());
 
-            // Converte a data para o formato AAMMDD
-            string dataAAMMDD = data.Substring(6, 2) + data.Substring(2, 2) + data.Substring(0, 2);
+            Console.Write("Digite o segundo número: ");
+            num2 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Data no formato AAAAMMDD: " + dataAAAAMMDD);
-            Console.WriteLine("Data no formato AAMMDD: " + dataAAMMDD);
+            media = (num1 + num2) / 2;
+
+            Console.WriteLine("A média aritmética entre {0} e {1} é: {2}", num1, num2, media);
 
             Console.ReadKey();
         }
